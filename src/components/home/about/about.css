@@ -1,0 +1,54 @@
+.about{
+    width: 1070px;
+    margin: 2rem auto;
+}
+.about .heading {
+   
+    display: flex;
+    border-bottom: 3px solid #d5d5d5;
+}
+
+.about .heading h1{
+    font-size: 1.5rem;
+    color: rgb(33, 33, 33);
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    margin-bottom: -2px;
+    border-bottom: 3px solid #039be5;
+}
+
+.about .details{
+    margin: 1.25rem 0 1.75rem;
+    padding: 1.25rem;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.4);
+}
+
+.about .details .info{
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.about .details .watch , .download , .watchMobile , .seriesOnline{
+    margin-top: 1.25rem;
+}
+
+.about .details  h2{
+    margin-bottom: 0.625rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.about .details  p{
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+
+@media (max-width : 1098px) {
+    .about{
+        width: 95%;
+    }
+
+}

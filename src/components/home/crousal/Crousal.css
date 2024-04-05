@@ -1,0 +1,61 @@
+
+
+.slider-container {
+    width: 100%;
+    
+    margin: 0 auto;
+  }
+  
+  .inner {
+    margin: 0 10px 0 7px;
+    height: 278px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 185px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .inner .blacktint {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 0; 
+    width: 100%;
+    transition: all 0.4s linear;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+  }
+  
+  .inner .blacktint .moviename {
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+  
+  .inner .blacktint .rating {
+    color: white;
+    background-color: black;
+    padding: 2px 5px 2px 2px;
+    position: absolute;
+    font-size: 13px;
+    top: 90%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    border-radius: 5px;
+  }
+  
+  .inner .blacktint .rating .score {
+    margin-top: 0.1rem;
+  }
+  
+  .inner:hover .blacktint {
+    height: 278px;
+    opacity: 1; 
+  }

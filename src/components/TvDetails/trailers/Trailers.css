@@ -1,0 +1,27 @@
+.trailer{
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.trailer .heading{
+    display: flex;
+    border-bottom: 3px solid #d5d5d5;
+    margin-bottom: 1.5rem;
+}
+
+.trailer .heading h2{
+    font-size: 1.25rem;
+    color: rgb(33, 33, 33);
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    margin-bottom: -2px;
+    border-bottom: 3px solid #039be5;
+}
+
+.trailer .reactPlayer p{
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgb(51, 51, 51);
+    margin: 0.5rem 0 1rem;
+    line-height: 1.25rem;
+}

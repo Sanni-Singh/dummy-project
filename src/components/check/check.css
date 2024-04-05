@@ -1,0 +1,297 @@
+.latestMovies{
+    width: 1070px;
+    margin: 0 auto;
+}
+
+.latestMovies .heading {
+   
+    display: flex;
+    border-bottom: 3px solid #d5d5d5;
+}
+
+.latestMovies .heading h1{
+    font-size: 1.5rem;
+    color: rgb(33, 33, 33);
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    margin-bottom: -2px;
+    border-bottom: 3px solid #039be5;
+}
+
+.latestMovies .layout-change-buttons{
+    margin-top: 1rem;
+    transition: all 1s linear;
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+.latestMovies .layout-change-buttons .layout1{
+    font-size: 2rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0,0,0,.27);
+    color: #212121;
+    transition: all 0.25s linear;
+}
+
+.latestMovies .layout-change-buttons .layout2{
+    font-size: 2rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0,0,0,.27);
+    color: #212121;
+    transition: all 0.25s linear;
+}
+
+.latestMovies .layout-change-buttons .layout1:hover{
+    background-color: #039BE5;
+    color: white;
+}
+
+.latestMovies .layout-change-buttons .layout2:hover{
+    background-color: #039BE5;
+    color: white;
+}
+
+.latestMovies .results{
+    margin-top: 1.5rem;
+}
+.latestMovies .results .result-layout1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1.5rem;
+    
+}
+
+.latestMovies .results .result-layout1 .card{
+    width: 190px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.latestMovies .results .result-layout1 .card .poster_rating{
+   
+    position: relative;
+    width: 100%;
+    height: 280px;
+    /* background:  #fff url(../../../assets/loadingold.svg) no-repeat 50% 50% ;  */
+    /*
+    /* background-image: url(https://image.tmdb.org/t/p/w185/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg); */
+    /* background-size: cover; */
+    box-shadow:  0 0 5px 1px rgba(0,0,0,0.27);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* .latestMovies .results .result-layout1 .card .poster_rating .loader{
+    
+    background:  #fff url(../../../assets/loadingold.svg) no-repeat 50% 50% ; 
+    background-size: cover;
+    font-size: 5rem;
+    width: 100%;
+    height: 280px;
+} */
+
+.latestMovies .results .result-layout1 .card .poster_rating img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+
+.latestMovies .results .result-layout1 .card .poster_rating .rating{
+    position: absolute;
+    top: 90%;
+    right: 0.5%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    
+    padding: 2px 4px 2px 2px;
+    column-gap: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.618);
+}
+.latestMovies .results .result-layout1 .card .poster_rating .rating .num{
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 0.05rem;
+}
+
+.latestMovies .results .result-layout1 .card .poster_rating .rating .star{
+    font-size: 0.7rem;
+}
+
+.latestMovies .results .result-layout1 .card .name_year{
+    display: flex;
+    flex-direction: column;
+}
+
+.latestMovies .results .result-layout1 .card .name_year .name{
+    margin: 0.7rem 0 0.2rem;
+}
+
+.latestMovies .results .result-layout1 .card .name_year .name .navlink{
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.latestMovies .results .result-layout1 .card .name_year .name .navlink:hover{
+    color: #039BE5;
+}
+
+.latestMovies .results .result-layout1 .card .name_year .year{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgb(153, 157, 163);
+}
+
+
+
+
+.latestMovies .results .result-layout2 .card{
+    margin-top: 1.25rem ;
+    display: flex;
+    height: 292px;
+    column-gap: 1.29rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.136) ;
+}
+
+.latestMovies .results .result-layout2 .card .image{
+    width: 180px;
+    height: 270px;
+    cursor: pointer;
+    box-shadow:  0 0 5px 1px rgba(0,0,0,0.27);
+    overflow: hidden;
+}
+
+.latestMovies .results .result-layout2 .card .image img{
+    height: 100%;
+    width: 100%;
+}
+
+.latestMovies .results .result-layout2 .card .details  .name_year{
+    display: flex;
+    flex-direction: column;
+}
+
+.latestMovies .results .result-layout2 .card .details .name_year .name{
+    margin: 0 0 0.2rem;
+}
+
+.latestMovies .results .result-layout2 .card .details .name_year .name .navlink{
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.latestMovies .results .result-layout2 .card .details .name_year .name .navlink:hover{
+    color: #039BE5;
+}
+
+.latestMovies .results .result-layout2 .card .details .name_year .year{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgb(153, 157, 163);
+}
+
+.latestMovies .results .result-layout2 .card .details{
+    width: calc(100% - 180px);
+}
+
+.latestMovies .results .result-layout2 .card .details .rating{
+    max-width: 45px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 2px 4px 2px 2px;
+    column-gap: 0.2rem;
+    margin: 0.4rem 0 0.8rem;
+    background-color: rgb(33, 33, 33);
+    
+}
+.latestMovies .results .result-layout2 .card .details .rating .num{
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 0.05rem;
+}
+
+.latestMovies .results .result-layout2 .card .details .rating .star{
+    font-size: 0.7rem;
+}
+
+.latestMovies .results .result-layout2 .card .details .overview{
+    height: 150px;
+    overflow: scroll;
+}
+
+.latestMovies .results .result-layout2 .card .details .overview::-webkit-scrollbar{
+    display: none;
+}
+
+.latestMovies .results .result-layout2 .card .details .overview p{
+    color: rgb(51, 51, 51);
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+.fadeIn{
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.fadeout{
+    opacity: 0;
+    animation: fadeout 1s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+
+
+
+
+@media (max-width : 1098px) {
+    .latestMovies{
+        width: 95%;
+    }
+
+}
+
+@media (max-width : 600px) {
+    .latestMovies .results .result-layout1{
+        justify-content: space-evenly;
+    }
+}
+
+
+
+
+

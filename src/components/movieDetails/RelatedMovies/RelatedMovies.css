@@ -1,0 +1,84 @@
+.relatedMovies{
+    width: 100%;
+}
+
+
+
+.relatedMovies .heading{
+    display: flex;
+    border-bottom: 3px solid #d5d5d5;
+    margin-bottom: 1.5rem;
+}
+
+.relatedMovies .heading h2{
+    font-size: 1.25rem;
+    color: rgb(33, 33, 33);
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    margin-bottom: -2px;
+    border-bottom: 3px solid #039be5;
+}
+
+.relatedMovies .results{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.relatedMovies .results .box{
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.relatedMovies .results .box .image img{
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+}
+
+.relatedMovies .results .box .details .navlink{
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgb(51,51,51);
+    transition: all 0.25s linear;
+}
+
+.relatedMovies .results .box .details .navlink:hover{
+    color: #039be5;
+}
+
+.relatedMovies .results .box .details .year{
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgb(120,120,120);
+    margin-top: 0.2rem;
+}
+
+.relatedMovies .results .box .details .rating-star{
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    column-gap: 0.2rem;
+    border-radius: 2px;
+    width: 50px;
+}
+
+.relatedMovies .results .box .details .rating-star .rating{
+    margin-top: 0.1rem;
+}
+
+.relatedMovies .results .notfound{
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgb(51, 51, 51);
+    margin: 0.5rem 0 1rem;
+    line-height: 1.25rem;
+    margin-top: -1rem;
+}
+
+

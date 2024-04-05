@@ -1,0 +1,121 @@
+.crousal{
+    background-image: url("../../../assets/sliderBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 410px;
+    box-shadow: 0 0 6px rgba(0,0,0,.27);
+    padding: 0.1px;
+}
+
+.crousal .backgroundBlackTint{
+    background-color: rgba(0, 0, 0, .6);
+    height: 100%;
+    padding: 0.1px;
+}
+.crousal .backgroundBlackTint .title{
+    margin-left: 15px;
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.crousal .backgroundBlackTint .title h2{
+    padding: 1px 0 10px;
+    margin-top: 30px;
+    color: white;
+    font-weight: 400;
+}
+.crousal .backgroundBlackTint .title .bottom-line{
+    height: 2.5px;
+    background-color: white;
+}
+
+.crousal .backgroundBlackTint .title .bottom-line .blueline{
+    width: 175px;
+    height: 2.5px;
+    background-color:  #039be5;
+}
+
+.crousal .backgroundBlackTint .crousals{
+    width: 1020px;
+    margin: 2rem auto;
+    
+}
+
+@media (max-width: 1098px) {
+    .crousal .backgroundBlackTint .crousals{
+        width: 85%;
+    }
+
+    .crousal .backgroundBlackTint .title{
+        width: 90%;
+    }
+}
+
+@media (max-width: 449px) {
+    .crousal .backgroundBlackTint .crousals{
+        width: 70%;
+    }
+
+    .crousal .backgroundBlackTint .title{
+        width: 70%;
+    }
+
+    
+}
+
+/* .crousal .backgroundBlackTint .card{
+    background-image: url("https://image.tmdb.org/t/p/w185/r65fWcFELCSeyyrkq5wY09EPSGN.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 2rem;
+    width: 200px;
+    height: 280px;
+    margin: 2rem auto 0;
+    cursor: pointer;
+}
+
+.crousal .backgroundBlackTint .card .blacktint{
+    background-color: rgba(0, 0, 0, .6);
+    height: 0;
+    width: 100%;
+    transition: all 0.4s linear;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.crousal .backgroundBlackTint .card .blacktint .moviename{
+    text-align: center;
+    color: white;
+    width: 90%;
+}
+
+.crousal .backgroundBlackTint .card .blacktint .rating{
+    color: white;
+    background-color: black;
+    padding: 2px 5px 2px 2px;
+    position: absolute;
+    font-size: 13px;
+    top: 90%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    border-radius: 5px;
+}
+.crousal .backgroundBlackTint .card .blacktint .rating .score{
+    margin-top: 0.1rem;
+}
+
+.crousal .backgroundBlackTint .card:hover .blacktint{
+  height: 100%;
+} */
+
+/* .chek{
+    width: 80%;
+    border: 1px solid black;
+    margin: 2rem auto 5rem;
+} */
