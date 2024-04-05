@@ -29,7 +29,7 @@ const Movies_List_Section = () => {
     topMovies();
     newMovies();
     justAdded();
-  });
+  },  []);
   return (
     <div className="top-movies-section">
       <div className="top-10-Movies">

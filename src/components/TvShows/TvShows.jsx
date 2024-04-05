@@ -16,27 +16,27 @@ const TvShows = () => {
       setTvData([...Response.results]);
     });
   };
-  useEffect(() => {
-    Apicall();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  } , [value.id , currentPage])
-
-  useEffect(() => {
-    setCurrentPage(1);
-  } , [value.id])
+  
 
   const total_pages = () => {
     ApiCall(`discover/tv?with_genres=${value.id}`).then((Response) => {
       setTotalPages(Response.total_pages);
+      setCurrentPage(1)
     });
   };
 
+  
+
   useEffect(() => {
-    total_pages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value.id , totalPages]);
+    total_pages(); 
+    Apicall(); 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value.id , currentPage]); 
 
 
+  useEffect(() => {
+    setCurrentPage(1)
+  } , [value.id])
 
 
 

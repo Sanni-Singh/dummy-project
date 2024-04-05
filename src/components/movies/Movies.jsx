@@ -27,30 +27,23 @@ const Movies = () => {
       setUrl("movie/now_playing");
     }
     setCurrentPage(1);
-  }, [value.name]);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const Apicall = () => {
-    ApiCall(`${url}?page=${currentPage}`).then((Response) => {
-      setMovieData([...Response.results]);
-    });
-  };
-
-  const total_pages = () => {
-    ApiCall(`${url}`).then((Response) => {
-      setTotalPages(Response.total_pages);
-    });
-  };
+  }, [value.name]); // Update URL when value.name changes
 
   useEffect(() => {
-    Apicall();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const fetchData = async () => {
+      try {
+        const response = await ApiCall(`${url}?page=${currentPage}`);
+        setMovieData([...response.results]);
+        setTotalPages(response.total_pages);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    if (url) {
+      fetchData();
+    }
   }, [url, currentPage]);
-
-  useEffect(() => {
-    total_pages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url, totalPages]);
 
   const handleChange = (event, pageNumber) => {
     setCurrentPage(pageNumber);
@@ -62,7 +55,7 @@ const Movies = () => {
       <div className="pagination">
         <Stack spacing={200}>
           <Pagination
-            count={totalPages > 500 ? 500 : totalPages}
+            count={ totalPages > 500 ? 500 :totalPages}
             page={currentPage}
             variant="outlined"
             shape="rounded"
