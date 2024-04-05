@@ -59,3 +59,9 @@
     height: 278px;
     opacity: 1; 
   }
+
+  @media (max-width : 449px) {
+    .inner{
+      width: 100%;
+    }
+  }
