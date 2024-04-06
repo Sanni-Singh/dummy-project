@@ -6,44 +6,61 @@ import Search from './components/Search/Search';
 import TvShows from './components/TvShows/TvShows';
 import TvDetails from "./components/TvDetails/TvDetails";
 import MovieDetail from './components/movieDetails/MovieDetail';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import MovieContext from "./context/movieContext";
 import Footer from "./components/footer/Footer";
 import ContactUs from "./components/ContactUs/ContactUs"
 
+const AppLayout = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  )
+}
+
 const router = createBrowserRouter([
   {
     path : "/",
-    element : <> <Navbar /> <Home /> <Footer /> </>
+    element : <AppLayout />,
+    children : [
+      {
+        path : "",
+        element : <Home />
+      },
+      {
+        path : '/genre/:id/:name',
+        element :  <Genre /> 
+      },
+      {
+        path : '/TvShows/:id/:name',
+        element :  <TvShows /> 
+      },
+      {
+        path : "/movies/:name",
+        element :  <Movies /> 
+      },
+      {
+        path : "/search",
+        element :  <Search /> 
+      },
+      {
+        path : "/movieDetail/:Movieid",
+        element : <MovieDetail /> 
+      },
+      {
+        path : "/TvShowDetail/:TvShowid",
+        element :  <TvDetails /> 
+      },
+      {
+        path : "/ContactUs",
+        element :  <ContactUs /> 
+      }
+    ]
   },
-  {
-    path : '/genre/:id/:name',
-    element : <> <Navbar /> <Genre /> <Footer /> </>
-  },
-  {
-    path : '/TvShows/:id/:name',
-    element : <> <Navbar /> <TvShows /> <Footer /> </>
-  },
-  {
-    path : "/movies/:name",
-    element : <> <Navbar /> <Movies /> <Footer /> </>
-  },
-  {
-    path : "/search",
-    element : <> <Navbar/> <Search /> <Footer /> </>
-  },
-  {
-    path : "/movieDetail/:Movieid",
-    element : <> <Navbar /> <MovieDetail /> <Footer /> </>
-  },
-  {
-    path : "/TvShowDetail/:TvShowid",
-    element : <> <Navbar /> <TvDetails /> <Footer /> </>
-  },
-  {
-    path : "/ContactUs",
-    element : <> <Navbar /> <ContactUs /> <Footer /> </>
-  }
+  
 
 ])
 function App() {

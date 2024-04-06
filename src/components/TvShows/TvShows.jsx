@@ -14,6 +14,7 @@ const TvShows = () => {
   const Apicall = () => {
     ApiCall(`discover/tv?page=${currentPage}&with_genres=${value.id}`).then((Response) => {
       setTvData([...Response.results]);
+      setTotalPages(Response.total_pages);
     });
   };
   
@@ -21,22 +22,23 @@ const TvShows = () => {
   const total_pages = () => {
     ApiCall(`discover/tv?with_genres=${value.id}`).then((Response) => {
       setTotalPages(Response.total_pages);
-      setCurrentPage(1)
+      setCurrentPage(1);
     });
   };
 
   
-
   useEffect(() => {
-    total_pages(); 
+    total_pages()
     Apicall(); 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value.id , currentPage]); 
-
-
-  useEffect(() => {
-    setCurrentPage(1)
   } , [value.id])
+  useEffect(() => {
+    Apicall(); 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage]); 
+
+
+  
 
 
 
